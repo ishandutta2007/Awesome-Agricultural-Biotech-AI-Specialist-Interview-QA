@@ -13,6 +13,7 @@
   <a href="#-repository-structure"><img src="https://img.shields.io/badge/Topics-12-blue?style=for-the-badge&logo=readme&logoColor=white" alt="12 Crop Genomics and ML Topics"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="MIT License"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-Welcome-ff69b4?style=for-the-badge&logo=github&logoColor=white" alt="PRs Welcome"></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Agricultural-Biotech-AI-Specialist-Interview-QA/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Agricultural-Biotech-AI-Specialist-Interview-QA?style=social" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
 
