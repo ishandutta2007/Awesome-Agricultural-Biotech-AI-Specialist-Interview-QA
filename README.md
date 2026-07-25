@@ -155,6 +155,17 @@ MIT License — see **[LICENSE](LICENSE)**. 📄
 
 ---
 
+##  Star History
+<div align="center">
+<a href="https://www.star-history.com/?repos=ishandutta2007%2FAwesome-Agricultural-Biotech-AI-Specialist-Interview-QA&type=date&legend=bottom-right">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Agricultural-Biotech-AI-Specialist-Interview-QA&type=date&theme=dark&legend=bottom-right" />
+<source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Agricultural-Biotech-AI-Specialist-Interview-QA&type=date&legend=bottom-right" />
+<img alt="Star History Chart" src="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Agricultural-Biotech-AI-Specialist-Interview-QA&type=date&legend=bottom-right" />
+</picture>
+</a>
+</div>
+
 <p align="center">
   <strong>📅 Last Updated:</strong> July 2026 &nbsp;|&nbsp; <strong>👥 Contributors:</strong> 1 (growing! 🌱)
 </p>
