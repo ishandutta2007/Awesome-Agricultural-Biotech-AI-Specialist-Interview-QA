@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320">
+  <defs>
+    <!-- Animated gradient background -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#064e3b">
+        <animate attributeName="stop-color" values="#064e3b;#166534;#14532d;#064e3b" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#166534">
+        <animate attributeName="stop-color" values="#166534;#15803d;#166534;#0f766e" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#0f766e">
+        <animate attributeName="stop-color" values="#0f766e;#064e3b;#0f766e;#166534" dur="10s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <!-- DNA helix gradient -->
+    <linearGradient id="dnaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#86efac;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#34d399;stop-opacity:0.6"/>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Particle glow -->
+    <filter id="particleGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Text shadow -->
+    <filter id="textShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+
+    <!-- Subtle grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(134,239,172,0.06)" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="320" fill="url(#bgGrad)" rx="12"/>
+  <rect width="1200" height="320" fill="url(#grid)" rx="12"/>
+
+  <!-- Animated floating particles (seeds/spores) -->
+  <g filter="url(#particleGlow)">
+    <circle cx="100" cy="60" r="2" fill="#86efac" opacity="0.7">
+      <animate attributeName="cy" values="60;40;60" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="250" cy="250" r="1.5" fill="#6ee7b7" opacity="0.5">
+      <animate attributeName="cy" values="250;230;250" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.2;0.5" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="80" r="2.5" fill="#a7f3d0" opacity="0.6">
+      <animate attributeName="cy" values="80;55;80" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="400;410;400" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="270" r="1.8" fill="#86efac" opacity="0.5">
+      <animate attributeName="cy" values="270;245;270" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="900" cy="50" r="2" fill="#6ee7b7" opacity="0.6">
+      <animate attributeName="cy" values="50;30;50" dur="3.8s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="900;910;900" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1050" cy="200" r="1.5" fill="#a7f3d0" opacity="0.4">
+      <animate attributeName="cy" values="200;180;200" dur="4.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="550" cy="290" r="2" fill="#86efac" opacity="0.5">
+      <animate attributeName="cy" values="290;270;290" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1150" cy="100" r="1.8" fill="#6ee7b7" opacity="0.6">
+      <animate attributeName="cy" values="100;80;100" dur="4.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- DNA double helix (left side decoration) -->
+  <g transform="translate(60, 30)" opacity="0.35" filter="url(#glow)">
+    <!-- Strand 1 -->
+    <path d="M0,0 C15,20 -15,40 0,60 C15,80 -15,100 0,120 C15,140 -15,160 0,180 C15,200 -15,220 0,240 C15,260 -15,270 0,280" 
+          fill="none" stroke="#86efac" stroke-width="2.5" stroke-linecap="round">
+      <animate attributeName="d" 
+               values="M0,0 C15,20 -15,40 0,60 C15,80 -15,100 0,120 C15,140 -15,160 0,180 C15,200 -15,220 0,240 C15,260 -15,270 0,280;
+                       M0,0 C-15,20 15,40 0,60 C-15,80 15,100 0,120 C-15,140 15,160 0,180 C-15,200 15,220 0,240 C-15,260 15,270 0,280;
+                       M0,0 C15,20 -15,40 0,60 C15,80 -15,100 0,120 C15,140 -15,160 0,180 C15,200 -15,220 0,240 C15,260 -15,270 0,280"
+               dur="6s" repeatCount="indefinite"/>
+    </path>
+    <!-- Strand 2 -->
+    <path d="M0,0 C-15,20 15,40 0,60 C-15,80 15,100 0,120 C-15,140 15,160 0,180 C-15,200 15,220 0,240 C-15,260 15,270 0,280" 
+          fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round">
+      <animate attributeName="d" 
+               values="M0,0 C-15,20 15,40 0,60 C-15,80 15,100 0,120 C-15,140 15,160 0,180 C-15,200 15,220 0,240 C-15,260 15,270 0,280;
+                       M0,0 C15,20 -15,40 0,60 C15,80 -15,100 0,120 C15,140 -15,160 0,180 C15,200 -15,220 0,240 C15,260 -15,270 0,280;
+                       M0,0 C-15,20 15,40 0,60 C-15,80 15,100 0,120 C-15,140 15,160 0,180 C-15,200 15,220 0,240 C-15,260 15,270 0,280"
+               dur="6s" repeatCount="indefinite"/>
+    </path>
+    <!-- Rungs -->
+    <g stroke="#6ee7b7" stroke-width="1.2" opacity="0.7">
+      <line x1="-12" y1="30" x2="12" y2="30"><animate attributeName="opacity" values="0.7;0.3;0.7" dur="3s" repeatCount="indefinite"/></line>
+      <line x1="-12" y1="60" x2="12" y2="60"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/></line>
+      <line x1="-12" y1="90" x2="12" y2="90"><animate attributeName="opacity" values="0.7;0.3;0.7" dur="3.5s" repeatCount="indefinite"/></line>
+      <line x1="-12" y1="120" x2="12" y2="120"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.8s" repeatCount="indefinite"/></line>
+      <line x1="-12" y1="150" x2="12" y2="150"><animate attributeName="opacity" values="0.7;0.3;0.7" dur="3.2s" repeatCount="indefinite"/></line>
+      <line x1="-12" y1="180" x2="12" y2="180"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/></line>
+      <line x1="-12" y1="210" x2="12" y2="210"><animate attributeName="opacity" values="0.7;0.3;0.7" dur="4s" repeatCount="indefinite"/></line>
+      <line x1="-12" y1="240" x2="12" y2="240"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="3.3s" repeatCount="indefinite"/></line>
+    </g>
+  </g>
+
+  <!-- DNA helix (right side decoration) -->
+  <g transform="translate(1140, 20)" opacity="0.3" filter="url(#glow)">
+    <path d="M0,0 C12,25 -12,50 0,75 C12,100 -12,125 0,150 C12,175 -12,200 0,225 C12,250 -12,275 0,290" 
+          fill="none" stroke="#86efac" stroke-width="2" stroke-linecap="round">
+      <animate attributeName="d" 
+               values="M0,0 C12,25 -12,50 0,75 C12,100 -12,125 0,150 C12,175 -12,200 0,225 C12,250 -12,275 0,290;
+                       M0,0 C-12,25 12,50 0,75 C-12,100 12,125 0,150 C-12,175 12,200 0,225 C-12,250 12,275 0,290;
+                       M0,0 C12,25 -12,50 0,75 C12,100 -12,125 0,150 C12,175 -12,200 0,225 C12,250 -12,275 0,290"
+               dur="7s" repeatCount="indefinite"/>
+    </path>
+    <path d="M0,0 C-12,25 12,50 0,75 C-12,100 12,125 0,150 C-12,175 12,200 0,225 C-12,250 12,275 0,290" 
+          fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round">
+      <animate attributeName="d" 
+               values="M0,0 C-12,25 12,50 0,75 C-12,100 12,125 0,150 C-12,175 12,200 0,225 C-12,250 12,275 0,290;
+                       M0,0 C12,25 -12,50 0,75 C12,100 -12,125 0,150 C12,175 -12,200 0,225 C12,250 -12,275 0,290;
+                       M0,0 C-12,25 12,50 0,75 C-12,100 12,125 0,150 C-12,175 12,200 0,225 C-12,250 12,275 0,290"
+               dur="7s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Leaf/plant icon -->
+  <g transform="translate(160, 100)" filter="url(#glow)">
+    <path d="M0,60 C0,60 -5,30 10,-5 C25,20 40,10 55,0 C40,25 30,35 25,60 Z" 
+          fill="#22c55e" opacity="0.25">
+      <animate attributeName="opacity" values="0.25;0.35;0.25" dur="5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M12,55 C12,55 12,30 12,5" fill="none" stroke="#86efac" stroke-width="1.5" opacity="0.3"/>
+  </g>
+
+  <!-- Circuit/AI node network decoration -->
+  <g transform="translate(1020, 80)" opacity="0.2" filter="url(#glow)">
+    <circle cx="0" cy="0" r="4" fill="#86efac">
+      <animate attributeName="r" values="4;5;4" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="40" cy="30" r="3" fill="#6ee7b7">
+      <animate attributeName="r" values="3;4;3" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-20" cy="50" r="3.5" fill="#a7f3d0">
+      <animate attributeName="r" values="3.5;4.5;3.5" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="-10" r="2.5" fill="#86efac"/>
+    <circle cx="20" cy="80" r="3" fill="#6ee7b7">
+      <animate attributeName="r" values="3;4;3" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <line x1="0" y1="0" x2="40" y2="30" stroke="#86efac" stroke-width="1" opacity="0.5"/>
+    <line x1="0" y1="0" x2="-20" y2="50" stroke="#6ee7b7" stroke-width="1" opacity="0.5"/>
+    <line x1="0" y1="0" x2="60" y2="-10" stroke="#a7f3d0" stroke-width="1" opacity="0.5"/>
+    <line x1="40" y1="30" x2="20" y2="80" stroke="#86efac" stroke-width="1" opacity="0.5"/>
+    <line x1="-20" y1="50" x2="20" y2="80" stroke="#6ee7b7" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- Main title -->
+  <text x="600" y="115" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="38" fill="#ffffff" filter="url(#textShadow)" letter-spacing="1">
+    🌱 Awesome Agricultural Biotech
+  </text>
+  <text x="600" y="165" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-weight="800" font-size="38" fill="#ffffff" filter="url(#textShadow)" letter-spacing="1">
+    AI Specialist Interview Q&amp;A
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="210" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-weight="400" font-size="16" fill="#a7f3d0" opacity="0.9" letter-spacing="3">
+    CROP GENOMICS • PLANT BREEDING • PRECISION AGRICULTURE • ML
+  </text>
+
+  <!-- Animated underline -->
+  <rect x="250" y="225" width="700" height="1.5" fill="#34d399" opacity="0.4" rx="1">
+    <animate attributeName="width" values="0;700" dur="2s" fill="freeze"/>
+    <animate attributeName="x" values="600;250" dur="2s" fill="freeze"/>
+  </rect>
+
+  <!-- Stats badges -->
+  <g transform="translate(600, 270)" text-anchor="middle">
+    <!-- Questions badge -->
+    <rect x="-265" y="-16" width="120" height="32" rx="16" fill="rgba(134,239,172,0.15)" stroke="#86efac" stroke-width="1" opacity="0.8"/>
+    <text x="-205" y="5" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#86efac" font-weight="600">📝 185+ Q&amp;As</text>
+    
+    <!-- Topics badge -->
+    <rect x="-115" y="-16" width="110" height="32" rx="16" fill="rgba(134,239,172,0.15)" stroke="#86efac" stroke-width="1" opacity="0.8"/>
+    <text x="-60" y="5" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#86efac" font-weight="600">📚 12 Topics</text>
+    
+    <!-- Duration badge -->
+    <rect x="25" y="-16" width="130" height="32" rx="16" fill="rgba(134,239,172,0.15)" stroke="#86efac" stroke-width="1" opacity="0.8"/>
+    <text x="90" y="5" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#86efac" font-weight="600">⏱️ 30-50 Hours</text>
+    
+    <!-- License badge -->
+    <rect x="180" y="-16" width="90" height="32" rx="16" fill="rgba(134,239,172,0.15)" stroke="#86efac" stroke-width="1" opacity="0.8"/>
+    <text x="225" y="5" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#86efac" font-weight="600">⚖️ MIT</text>
+  </g>
+
+  <!-- Pulsing corner accents -->
+  <circle cx="20" cy="20" r="3" fill="#34d399" opacity="0.4">
+    <animate attributeName="r" values="3;5;3" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.2;0.4" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1180" cy="20" r="3" fill="#34d399" opacity="0.4">
+    <animate attributeName="r" values="3;5;3" dur="4s" repeatCount="indefinite" begin="1s"/>
+    <animate attributeName="opacity" values="0.4;0.2;0.4" dur="4s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+  <circle cx="20" cy="300" r="3" fill="#34d399" opacity="0.4">
+    <animate attributeName="r" values="3;5;3" dur="4s" repeatCount="indefinite" begin="2s"/>
+    <animate attributeName="opacity" values="0.4;0.2;0.4" dur="4s" repeatCount="indefinite" begin="2s"/>
+  </circle>
+  <circle cx="1180" cy="300" r="3" fill="#34d399" opacity="0.4">
+    <animate attributeName="r" values="3;5;3" dur="4s" repeatCount="indefinite" begin="3s"/>
+    <animate attributeName="opacity" values="0.4;0.2;0.4" dur="4s" repeatCount="indefinite" begin="3s"/>
+  </circle>
+</svg>
